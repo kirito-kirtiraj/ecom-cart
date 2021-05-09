@@ -1,0 +1,19 @@
+.product-card {
+  box-shadow: 1px 1px 3px 2px grey;
+  padding: 10px 20px 20px;
+  border-radius: 7px;
+}
+
+.product-card button {
+  padding: 10px 20px;
+  background-color: orangered;
+  color: white;
+  border: 1px solid orangered;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  box-shadow: 1px 1px 1px 1px grey;
+}

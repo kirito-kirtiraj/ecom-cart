@@ -3,7 +3,7 @@ import { Redirect, Route } from "react-router-dom";
 import { connect } from "react-redux";
 
 import LoginPage from "./components/LoginPage";
-import ProductsPage from "./components/ProductsPage";
+import ProductsPage from "./components/Products";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 
