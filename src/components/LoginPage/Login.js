@@ -5,20 +5,15 @@ import { refreshTokenSetup } from '../../utils/refreshToken';
 
 const clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID;
 
-function Login() {
+const Login = ({setLogin}) => {
   const onSuccess = (res) => {
     console.log('Login Success: currentUser:', res.profileObj);
-    alert(
-      `Logged in successfully welcome ${res.profileObj.name} 😍. \n See console for full profile object.`
-    );
     refreshTokenSetup(res);
+    setLogin(true);
   };
 
   const onFailure = (res) => {
     console.log('Login failed: res:', res);
-    alert(
-      `Failed to login. 😢 Please ping this to repo owner twitter.com/sivanesh_fiz`
-    );
   };
 
   return (
