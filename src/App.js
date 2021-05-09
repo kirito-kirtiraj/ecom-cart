@@ -1,17 +1,17 @@
-import React from 'react';
-import './App.css';
-import LoginPage from './components/LoginPage';
-import Logout from './components/Logout';
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 
-function App() {
+import Routes from "./Routes";
+import "./App.css";
+
+const App = () => {
   return (
     <div className="App">
-      <h2>The Components way</h2>
-      <LoginPage />
-      <br />
-      <Logout />
+      <Router>
+        <Routes />
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
