@@ -22,7 +22,8 @@ const ConnectedLoginPage = ({ isLoggedIn, setLogin, location, page }) => {
     history.push(location.state?.redirectedFrom || "/products");
 
   return (
-    <div>
+    <div className={page? "page-container" : ""}>
+      {page && <h1>Login To Mini ECom</h1>}
       {page && location.state?.loginFirst ? (
         <h4>Please login first and try again.</h4>
       ) : null}

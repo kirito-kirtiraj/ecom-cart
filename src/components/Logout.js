@@ -14,7 +14,6 @@ const mapDispatchToProps = (dispatch) => {
 
 const ConnectedLogout = ({ setLogin }) => {
   const onSuccess = () => {
-    console.log("Logout made successfully");
     setLogin(false);
   };
 
@@ -29,6 +28,6 @@ const ConnectedLogout = ({ setLogin }) => {
   );
 };
 
-const Logout = connect(null, mapDispatchToProps)(ConnectedLogout)
+const Logout = connect(null, mapDispatchToProps)(ConnectedLogout);
 
 export default Logout;

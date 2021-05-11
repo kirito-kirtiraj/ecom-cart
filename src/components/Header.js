@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
 
 const ConnectedHeader = ({ isLoggedIn, cart }) => {
   return (
-    <header className="container">
+    <header className="width-container">
       <Link className="site-name" to="/">
         <h1>Mini ECom</h1>
       </Link>

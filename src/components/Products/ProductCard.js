@@ -17,11 +17,11 @@ const ProductCard = ({
       <h3>{product.title}</h3>
       <h4>Price: {product.price}₹</h4>
       {isOnCartPage ? (
-        <button onClick={() => removeFromCart(product.id)}>
+        <button className="standard-button" onClick={() => removeFromCart(product.id)}>
           Remove from cart
         </button>
       ) : (
-        <button onClick={() => handleAddToCart(product, isInCart)}>
+        <button  className="standard-button" onClick={() => handleAddToCart(product, isInCart)}>
           {isInCart ? "Go to cart" : "Add to cart"}
         </button>
       )}

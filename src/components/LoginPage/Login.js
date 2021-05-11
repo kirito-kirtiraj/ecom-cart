@@ -7,13 +7,12 @@ const clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID;
 
 const Login = ({setLogin}) => {
   const onSuccess = (res) => {
-    console.log('Login Success: currentUser:', res.profileObj);
     refreshTokenSetup(res);
     setLogin(true);
   };
 
   const onFailure = (res) => {
-    console.log('Login failed: res:', res);
+    alert("Login failed");
   };
 
   return (

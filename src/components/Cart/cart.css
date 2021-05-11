@@ -15,7 +15,7 @@
   padding-right: 50px;
 }
 
-.product-card.cart-product-card button {
+.cart-product-card  .standard-button {
   background-color: red;
   border: 1px solid red;
 }
