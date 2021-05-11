@@ -1,4 +1,9 @@
-import { SET_LOG_IN, ADD_TO_CART, REMOVE_FROM_CART } from "./actions";
+import {
+  SET_LOG_IN,
+  ADD_TO_CART,
+  REMOVE_FROM_CART,
+  CLEAR_CART,
+} from "./actions";
 
 const initialState = {
   isLoggedIn: false,
@@ -11,7 +16,6 @@ const rootReducer = (state = initialState, action) => {
       return Object.assign({}, state, { isLoggedIn: action.payload });
 
     case ADD_TO_CART:
-      console.log(state.cart.concat(action.payload));
       return Object.assign({}, state, {
         cart: state.cart.concat(action.payload),
       });
@@ -20,8 +24,10 @@ const rootReducer = (state = initialState, action) => {
       const cart = state.cart.filter(
         (product) => product.id !== action.payload
       );
-      console.log(cart);
       return Object.assign({}, state, { cart });
+
+    case CLEAR_CART:
+      return Object.assign({}, state, { cart: [], });
 
     default:
       return state;

@@ -43,8 +43,8 @@ const ConnectedProductsPage = ({ cart, isLoggedIn, addToCart }) => {
   return (
     <>
       <Header />
-      <h1 className="container">Buy Mini ECom Products</h1>
-      <div className="container products-grid">
+      <h1 className="width-container">Buy Mini ECom Products</h1>
+      <div className="width-container products-grid">
         {products.map((product, index) => {
           return (
             <ProductCard

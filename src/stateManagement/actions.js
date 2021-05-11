@@ -12,3 +12,8 @@ export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 export const removeFromCart = (payload) => {
   return { type: REMOVE_FROM_CART, payload };
 };
+
+export const CLEAR_CART = "CLEAR_CART"
+export const clearCart = () => {
+  return { type: CLEAR_CART };
+};

@@ -12,7 +12,6 @@ const mapStateToProps = (state) => {
 };
 
 const ConnectedRoutes = ({ isLoggedIn }) => {
-  console.log(isLoggedIn);
   return (
     <>
       <Route exact path="/" render={() => <Redirect to="/products" />} />

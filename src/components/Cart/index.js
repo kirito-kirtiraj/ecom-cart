@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { removeFromCart } from "../../stateManagement/actions";
 import Header from "../Header";
@@ -19,19 +20,26 @@ const ConnectedProductsPage = ({ cart, removeFromCart }) => {
   return (
     <>
       <Header />
-      <h1 className="container">Cart</h1>
-      <div className="container">
-        {cart.length === 0? <h3>No items in your cart</h3> : ""}
-        {cart.map((product, index) => {
-          return (
-            <ProductCard
-              key={index}
-              product={product}
-              isOnCartPage
-              removeFromCart={removeFromCart}
-            />
-          );
-        })}
+      <div className="page-container">
+        <h1 className="width-container">Cart</h1>
+        <div className="width-container centered">
+          {cart.length === 0 && <h3>No items in your cart</h3>}
+          {cart.map((product, index) => {
+            return (
+              <ProductCard
+                key={index}
+                product={product}
+                isOnCartPage
+                removeFromCart={removeFromCart}
+              />
+            );
+          })}
+          {cart.length > 0 && (
+            <Link to="/checkout" className="standard-button">
+              Proceed to checkout
+            </Link>
+          )}
+        </div>
       </div>
     </>
   );
